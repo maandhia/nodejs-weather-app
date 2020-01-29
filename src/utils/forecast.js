@@ -18,7 +18,11 @@ const forecast = (latitude, longitude, location, callback) => {
       const windSpeed = current.windSpeed * 3.6;
       callback(
         undefined,
-        `${day.data[0].summary} It is currently ${temp} degrees in ${location} but it feels like ${feel} degrees. The wind speed is currently ${windSpeed}km/h and there is a ${rain}% chance of rain.`
+        `${
+          day.data[0].summary
+        } It is currently ${temp} degrees in ${location} but it feels like ${feel} degrees. The wind speed is currently ${windSpeed.toFixed(
+          0
+        )}km/h and there is a ${rain}% chance of rain.`
       );
     }
   });
