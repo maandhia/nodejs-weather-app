@@ -4,7 +4,7 @@ const forecast = (latitude, longitude, location, callback) => {
   const url = `https://api.darksky.net/forecast/ddc5d24451f5f7546faf03beb26cea80/${latitude},${longitude}?units=si&exclude=hourly`;
 
   // hahahah
-  //
+  // bn
   request({ url, json: true }, (error, { body }) => {
     const { message, currently, daily } = body;
     if (error) {
