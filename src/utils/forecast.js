@@ -1,12 +1,14 @@
-const request = require("request");
+const request = require('request');
 
 const forecast = (latitude, longitude, location, callback) => {
   const url = `https://api.darksky.net/forecast/ddc5d24451f5f7546faf03beb26cea80/${latitude},${longitude}?units=si&exclude=hourly`;
 
+  // hahahah
+  //
   request({ url, json: true }, (error, { body }) => {
     const { message, currently, daily } = body;
     if (error) {
-      callback("Cannot connect to service", undefined);
+      callback('Cannot connect to service', undefined);
     } else if (message) {
       callback(message, undefined);
     } else {
